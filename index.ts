@@ -1,7 +1,5 @@
-export function main(): string {
-  return "Hello via Bun!";
-}
+export { SITE_NAME, DEFAULT_PORT } from "./constants.ts";
 
 if (import.meta.main) {
-  console.log(main());
+  await import("./server.ts");
 }

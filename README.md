@@ -1,16 +1,20 @@
 # democzo
 
+Bun app that serves a **static replica** of the Claude marketing landing (hero, Cowork band, pricing, FAQ) via `Bun.serve` and HTML imports. For local demo only — not affiliated with Anthropic.
+
 To install dependencies:
 
 ```bash
 bun install
 ```
 
-To run (with hot reload during development):
+Dev server (hot reload):
 
 ```bash
 bun run dev
 ```
+
+Then open the URL printed in the terminal (default [http://localhost:3000](http://localhost:3000)).
 
 Production-style run:
 
@@ -18,7 +22,7 @@ Production-style run:
 bun run start
 ```
 
-Bundle to `dist/`:
+Bundle server entry to `dist/`:
 
 ```bash
 bun run build
@@ -30,4 +34,4 @@ Tests:
 bun test
 ```
 
-This project uses [Bun](https://bun.sh) as the runtime, package manager, test runner, and bundler—TypeScript runs without a separate compile step in dev.
+Stack: [Bun](https://bun.sh) runtime, package manager, test runner, and bundler.

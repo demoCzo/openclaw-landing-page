@@ -1,6 +1,7 @@
 import { test, expect } from "bun:test";
-import { main } from "./index.ts";
+import { SITE_NAME, DEFAULT_PORT } from "./index.ts";
 
-test("main returns greeting", () => {
-  expect(main()).toBe("Hello via Bun!");
+test("site constants", () => {
+  expect(DEFAULT_PORT).toBe(3000);
+  expect(SITE_NAME).toContain("Claude");
 });
