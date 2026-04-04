@@ -1,6 +1,6 @@
 # democzo
 
-Bun app that serves a **static replica** of the Claude marketing landing (hero, Cowork band, pricing, FAQ) via `Bun.serve` and HTML imports. For local demo only — not affiliated with Anthropic.
+Bun app that serves a **static replica** of a Claude-style marketing landing branded **OpenClaw** (hero, Cowork band, pricing, FAQ) via `Bun.serve` and HTML imports. For local demo only — not affiliated with Anthropic.
 
 To install dependencies:
 
@@ -14,7 +14,7 @@ Dev server (hot reload):
 bun run dev
 ```
 
-Then open the URL printed in the terminal (default [http://localhost:3000](http://localhost:3000)).
+Then open the URL printed in the terminal (default [http://localhost:3000](http://localhost:3000)). If 3000 is already taken and `PORT` is unset, the server picks another free port automatically. To force a port: `PORT=3001 bun run dev`.
 
 Production-style run:
 
