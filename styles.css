@@ -559,42 +559,83 @@ button {
 
 .faq-item {
   border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.faq-item:first-of-type {
+  border-top: 1px solid var(--border);
 }
 
 .faq-item summary {
   list-style: none;
   cursor: pointer;
-  padding: 20px 0;
+  padding: 24px 8px;
   font-weight: 600;
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  transition: color 0.25s ease;
+  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
 
+.faq-item summary::after {
+  content: "";
+  position: absolute;
+  inset: 4px -8px;
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.faq-item summary:hover::after {
+  opacity: 1;
+}
+
+.faq-item[open] summary {
+  color: var(--accent);
+}
+
 .faq-chevron {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--text-muted);
 }
 
 .faq-item[open] .faq-chevron {
   transform: rotate(180deg);
+  color: var(--accent);
 }
 
 .faq-body {
-  padding: 0 0 20px;
+  padding: 0 8px 24px;
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.9375rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.6;
+  animation: faq-appear 0.3s ease-out;
+}
+
+@keyframes faq-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
