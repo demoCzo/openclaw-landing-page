@@ -188,15 +188,21 @@ button {
 }
 
 .btn-google {
-  background: #fff;
-  border: 1px solid var(--border);
+  background: #ea4335;
+  color: #fff;
+  border: 1px solid #ea4335;
   width: 100%;
   max-width: 360px;
 }
 
 .btn-google:hover {
-  background: var(--bg-card);
+  background: #d33426;
+  border-color: #d33426;
   text-decoration: none;
+}
+
+.btn-google .icon-google path {
+  fill: currentColor !important;
 }
 
 .btn-block {
