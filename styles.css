@@ -167,13 +167,15 @@ button {
 }
 
 .btn-outline {
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  color: var(--text);
+  border: 1px solid #28a745;
+  background: #28a745;
+  color: #fff;
 }
 
 .btn-outline:hover {
-  border-color: var(--text-muted);
+  background: #218838;
+  border-color: #218838;
+  color: #fff;
   text-decoration: none;
 }
 
